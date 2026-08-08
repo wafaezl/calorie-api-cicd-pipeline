@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calorie-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: calorie-api
+  template:
+    metadata:
+      labels:
+        app: calorie-api
+    spec:
+      containers:
+        - name: calorie-api
+          image: calorie-api
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8000
