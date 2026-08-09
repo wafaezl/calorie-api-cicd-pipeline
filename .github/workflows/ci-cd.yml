@@ -23,7 +23,7 @@ jobs:
 
       - name: Lancer les tests
         working-directory: calorie-api
-        run: pytest
+        run: python -m pytest
 
       - name: Connexion à Docker Hub
         uses: docker/login-action@v3
